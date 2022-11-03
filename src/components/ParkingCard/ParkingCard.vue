@@ -55,16 +55,6 @@ export default {
 </script>
 
 <style scoped>
-.btnUpdate{
-    color: gray;
-    background-color: white;
-    font-size: 1.6vw;
-    margin: 0.5vw auto;
-    width: 80%;
-    height: 3vw;
-    padding: 0vw;
-    border-radius: 1vw;
-}
 .cartCont{
     display: flex;
     flex-wrap: wrap;
@@ -75,7 +65,7 @@ export default {
     text-align: center;
     padding: 0.5vw 0vw;
     width: 10vw;
-    background-color: rgb(87, 87, 87);
+    background-color: rgba(13, 13, 46, 0.527);
     border-radius: 0.5vw;
     color: white;
     list-style: none;
