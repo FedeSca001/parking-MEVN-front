@@ -42,7 +42,7 @@ export default {
                     console.log(del);
                     listPark.getData();
                 } catch {
-                    err => console.log(err);
+                    alert('no conecta');
                 }
             }
         }
