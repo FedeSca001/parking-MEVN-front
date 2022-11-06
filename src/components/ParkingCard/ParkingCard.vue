@@ -39,8 +39,8 @@ export default {
                 try {
                     const url = 'http://localhost:5000/sites/park/' + idPark;
                     const del = await axios.delete(url)
-                    console.log(del);
                     listPark.getData();
+                    return del
                 } catch {
                     alert('no conecta');
                 }

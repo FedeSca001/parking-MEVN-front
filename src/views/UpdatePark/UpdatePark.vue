@@ -25,9 +25,7 @@
 
 <script>
 import axios from 'axios';
-import {
-    useParking
-} from '../../store/parkingSites';
+import {useParking} from '../../store/parkingSites';
 export default {
     data:()=>({
         nameCard: "",
@@ -48,8 +46,8 @@ export default {
                 avaliable: check
                 }
             const data = await axios.put(url,dataObject);
-            console.log(data.data);
             listPark.getData();
+            return data
         }
         return {
             listPark,

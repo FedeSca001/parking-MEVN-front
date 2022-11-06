@@ -25,9 +25,8 @@ export const useUsers = defineStore('useUser', {
                     phone: pHone,
                     mail: eMail
                 };
-                console.log('data',data);
                 const post = await axios.post(url,data);
-                console.log(post);
+                return post
             }catch {
                 err => console.log(err);
             }

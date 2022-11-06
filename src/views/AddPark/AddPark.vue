@@ -6,18 +6,12 @@
         label="Complete Name"
         required
         ></v-text-field>
-        <v-text-field
-        v-model="numb"
-        label="Complete Number"
-        type="number"
-        required
-        ></v-text-field>
-         <v-switch
+        <v-switch
             v-model="check"
             label="avaliable"
             hide-details
         ></v-switch>
-        <v-btn @click="sendPark(this.numb, this.name, this.check)">
+        <v-btn @click="sendPark(listPark.listSites.length+1,this.name, this.check)">
             Send
         </v-btn>
   </div>
@@ -25,13 +19,14 @@
 
 <script>
 import axios from 'axios';
+import {useParking} from '../../store/parkingSites'
 export default {
     data: ()=>({
         name: "",
-        numb: 0,
         check: Boolean,
     }),
     setup(){
+        const listPark = useParking();
         const sendPark = async (numb, name, check)=>{
             if(check === true){
                 check = true
@@ -49,10 +44,10 @@ export default {
                 }
         }
         const post = await axios.post( url , data);
-        console.log(post);
+        return post
     }
     return{
-        sendPark
+        sendPark,listPark
     }
     }
 }
