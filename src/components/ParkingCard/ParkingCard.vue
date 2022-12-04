@@ -37,7 +37,7 @@ export default {
             const confirmar = confirm('¿Seguro?');
             if (confirmar) {
                 try {
-                    const url = 'https://parking-back-end.onrender.com/sites/park/' + idPark;
+                    const url = 'http://localhost:5000/sites/park/' + idPark;
                     const del = await axios.delete(url)
                     listPark.getData();
                     return del

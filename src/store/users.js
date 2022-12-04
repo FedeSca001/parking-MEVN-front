@@ -8,7 +8,7 @@ export const useUsers = defineStore('useUser', {
     actions:{
         async getUsers(){
             try {
-            const url = 'https://parking-back-end.onrender.com/users/';
+            const url = "http://localhost:5000/users/";
             const rData = await axios.get(url);
             this.listUsers = rData.data;
             } catch{
@@ -17,7 +17,7 @@ export const useUsers = defineStore('useUser', {
         },
         addUser: async (naMe, dNi, aGe, pHone, eMail)=>{
             try {
-                const url = 'https://parking-back-end.onrender.com/users/send';
+                const url = "http://localhost:5000/users/send";
                 const data = {
                     name: naMe,
                     age: aGe,

@@ -33,7 +33,7 @@ export default {
             } else{
                 check = false
             }
-        const url = 'https://parking-back-end.onrender.com/sites/park'
+        const url = 'http://localhost:5000/sites/park'
         const data = {
             number: numb,
             name: name,

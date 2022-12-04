@@ -1,6 +1,5 @@
 <template>
         <v-btn to="/">Home</v-btn>
-        <v-btn to="/uploadImg">upload img</v-btn>
         <v-btn to="/usersMain">Users</v-btn>
         <DateComp/>
 </template>
