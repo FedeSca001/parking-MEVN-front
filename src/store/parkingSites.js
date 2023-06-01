@@ -7,7 +7,7 @@ export const useParking = defineStore('parksApi',{
   }),
   actions:{
     async getData (){
-          const url = "http://localhost:5000/sites/park/";
+          const url = "https://parking-back-end.onrender.com/sites/park/";
           const r = await axios.get(url);
           this.listSites = await r.data;
     }
